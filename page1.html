@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Search University</title>  
+</head>
+<body >
+    <style type="text/css">
+        /*background main page */
+        body{
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-teacher-s-college-classroom-coaching-course-poster-background-image_188494.jpg" ) ;
+          background-size:contain;
+          background-repeat: no-repeat;
+          background-color: sandybrown;
+          
+  
+        }
+
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+        /*navigation at the top page */
+        #navbar{
+          display: flex;
+          align-items: center;
+          background:sandybrown ;
+          height: 70px;
+
+          
+        }
+  
+      
+        ul{
+          display:flex;
+          list-style: none;
+        }
+        ul li{
+          list-style: none;
+          font-size: 30px;
+          
+        }
+  
+        ul li a{
+          color:   #540032;
+          text-decoration: none;
+          padding: 8px 35px;
+          border: 10px;
+          
+        }
+  
+        ul li a:hover{
+          color:sandybrown ;
+          background:#EAE6DF ;
+        }
+        
+
+        .wrapper {
+         display: flex;
+  
+         justify-content: center;
+         align-items: center;
+      }
+
+      
+#inner {
+  width: 80vw;
+  display: block;
+  margin: 0 auto;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+#input-container {
+  position: relative;
+}
+
+#input-container > img {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input {
+  height: 3rem;
+  width: 80vw;
+  display: block;
+  margin: 2rem auto 0 auto;
+  border-radius: 5px;
+  border: none;
+  padding: 0 10px;
+}
+
+input:focus{
+  outline: none;
+}
+
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  /*padding-left: 0.5rem;*/
+  color: #6c757d;
+}
+
+h1{
+  color: #540032;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+
+}
+
+#display-results {
+  width: 100%;
+  padding: 1rem 0 4rem;
+}
+
+.elements > div{
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-height: 100px;
+  margin: 0 auto 1.5rem;
+  width: 80vw;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 11px;
+  color: blue;
+}
+
+
+.school-country{
+  font-size: 15px
+}
+
+.show-hide{
+  display: none;
+}
+
+.outer-not-found{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+#not-found-photo, #error-photo {
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.oops {
+  text-align: center;
+}
+
+.close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.overlay  {
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  min-height: 80vh;
+  width: 100vw
+}
+
+  h1{
+    font-size: 3rem;
+  }
+
+  input::placeholder{
+    font-size: 0.9rem;
+  }
+
+  .elements{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+
+  .elements > div {
+    width: 40vw;
+  }
+
+  h4{
+    font-size: 1.3rem;
+  }
+
+  a {
+    font-size: 25px;
+    
+  }
+  a:hover{
+    color: #540032;
+  }
+
+  .school-country{
+    font-size: 16px;
+  }
+
+
+  #inner{
+    width: 50vw;
+  }
+
+ input {
+    width: 50vw;
+  }
+
+  .elements{
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+  }
+
+  .elements > div {
+    width: 24vw;
+  }
+  
+  h4{
+    font-size: 1.4rem;
+  }
+
+
+  .school-country{
+    font-size: 16px;
+  }
+
+      .form{
+      margin: auto;
+      text-align: center;
+      
+    }
+
+
+      h2 {
+  
+        font-size: 70px;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        color: #540032;
+      }
+
+     
+</style>        
+
+    <nav id="navbar">
+         <ul>
+           <li><a href="page1.html">HOME</a></li>
+           <li><a href="index.html">NOTES</a></li>   
+         </ul>     
+    </nav>
+
+    <div class="wrapper">
+      <h2>UNIVERSITY WORLD<h2>
+    </div>
+    
+        <div class="form">
+          <img src="https://news.chapman.edu/wp-content/uploads/2015/06/Global-Citizens-Plaza-740x482.jpg" height="450px">
+        </div>
+        
+          <section id="home">
+              <div id="inner">
+                  <h1>FIND UNIVERSITY IN THE WORLD</h1>
+                  <div id="input-container">
+                      <img src="./assets/search-icon.svg" id="search"/>
+                      <input 
+                          required
+                          autofocus
+                          type="text" 
+                          placeholder="Enter country here"
+                          id="input-box"
+                          />
+                  </div>
+              </div>
+
+              <div class="overlay"></div>
+              <div class="show-hide">
+                  <div class="outer-not-found">
+                      <div class="not-found">
+                          <img src="./assets/close-icon.png" class="close-icon"/>
+                          <div class="details">
+                              <img src="./assets/not-found.png"  id="not-found-photo"/>
+                              <h4 class="oops">Oops! <br>Sorry the word you requested is not found</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>  
+          </section>
+          
+          <section id="display-results">
+              <div class="elements">
+                  <h2 class="school-name"></h2>
+                  <p class="school-country"></p>
+                  <a class="school-url"></a>   
+              </div>
+          </section>  
+     
+        
+  
+
+  
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="pages1.js"></script>
+      
+
+</body>
+</html>
